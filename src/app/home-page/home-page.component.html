@@ -1,0 +1,70 @@
+<body class="center-content">
+<div class="photo-section position-relative">
+    <img src="assets/images/people.jpeg" alt="Your Photo" class="img-fluid w-100" style="max-height: 400px;">
+    <div class="overlay position-absolute top-50 start-50 translate-middle text-center">
+      <div class="text p-4">
+        <h3 class="text-dark">Improve your skills on your own</h3>
+        <h3 class="text-dark">To prepare for a better future</h3>
+        <button class="btn button" [routerLink]="['/auth', 'login']">Register Now</button>
+      </div>
+    </div>
+  </div>
+<!-- courses-section.component.html -->
+
+<div class="courses-section mt-4 mb-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="mb-0 discover">Discover our courses</h2>
+      <button class="btn view">View More</button>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4" *ngFor="let course of courses$ | async">
+          <div class="card border-0">
+            <img [src]="course.picture" alt="" class="card-img-top img-fluid" style="max-height: 150px;">
+            <div class="card-body ">
+              <h4 class="card-title mb-0"><strong>{{ course.title }}</strong></h4>
+              <p class="card-text" style="color: #eb4949;"><strong>{{ course.price }} DT/Month</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  <!-- contact-section.component.html -->
+  
+    <div class="contact-section mt-4 bg-lightorange p-4 " >
+        <div class="contact-cadre mb-3 text-center">
+          <h2>Contact Us</h2>
+        </div>
+      
+        <div class="contact-form d-flex justify-content-center align-items-center">
+          <form>
+            <div class="mb-3 name">
+              <label for="name" class="form-label">Name:</label>
+              <input type="text" id="name" name="name" placeholder="name" class="form-control form-control-sm"  required>
+            </div>
+      
+            <div class="mb-3 email">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Email" class="form-control form-control-sm" required>
+            </div>
+      
+            <div class="mb-3 message">
+              <label for="message" class="form-label">Message:</label>
+              <textarea id="message" name="message" placeholder="Message" class="form-control form-control-sm" required></textarea>
+            </div>
+      
+            <button type="submit" class="btn custom-button">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+</body>
+  
+  
+  
+  
+  

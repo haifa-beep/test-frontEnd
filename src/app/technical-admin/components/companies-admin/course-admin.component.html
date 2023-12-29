@@ -1,0 +1,52 @@
+
+<div class="d-flex justify-content-end m-3">
+  <a [routerLink]="['/admin', 'create-course']" class="btn btn-primary">Create Course</a>
+</div>
+   <div class="card m-3">
+     <h5 class="card-header">Courses</h5>
+   
+   <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"> 
+     
+         <!-- Position Column -->
+         <ng-container matColumnDef="id">
+           <th mat-header-cell mat-sort-header sortActionDescription="Sort by id" *matHeaderCellDef> ID. </th>
+           <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+         </ng-container>
+     
+         <!-- Name Column -->
+         <ng-container matColumnDef="title">
+           <th mat-header-cell mat-sort-header sortActionDescription="Sort by id" *matHeaderCellDef> title </th>
+           <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+         </ng-container>
+     
+         <!-- Weight Column -->
+         <ng-container matColumnDef="price">
+           <th mat-header-cell mat-sort-header sortActionDescription="Sort by id" *matHeaderCellDef> Price </th>
+           <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+         </ng-container>
+         <ng-container matColumnDef="picture">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Picture </th>
+          <td mat-cell *matCellDef="let element">
+            <img [src]="element.picture" alt="Course Image" width="50" height="50" *ngIf="element.picture">
+          </td>
+        </ng-container>
+         <ng-container matColumnDef="actions">
+          <th mat-header-cell mat-sort-header sortActionDescription="Sort by id" *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+            <a [routerLink]="['/admin', 'update-course', element.id]" class="btn btn-warning">Update</a>
+            <a class="btn btn-danger mx-2" (click)="deleteCourse(element.id)">Delete</a>
+          </td>
+        </ng-container>
+      
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       </table>
+     
+       <mat-paginator [pageSizeOptions]="[5, 15, 100]"
+                      showFirstLastButtons
+                      aria-label="Select page of periodic elements">
+       </mat-paginator>
+     </div>
+   </div>
+   

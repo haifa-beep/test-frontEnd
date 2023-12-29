@@ -1,0 +1,87 @@
+  <!-- Hero Start -->
+  <notifier-container></notifier-container>
+
+  <section class="bg-auth-home d-table w-100">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-6">
+          <div class="card shadow rounded border-0">
+            <div class="card-body">
+              <h4 class="card-title text-center">Signup</h4>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="login-form mt-4">
+                <!-- First name -->
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <label class="form-label">First name <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="user" class="fea icon-sm icons"></i-feather>
+                      <input type="text" class="form-control ps-5" placeholder="First Name" formControlName="first_name" required>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Last name -->
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <label class="form-label">Last name <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="user-check" class="fea icon-sm icons"></i-feather>
+                      <input type="text" class="form-control ps-5" placeholder="Last Name" formControlName="last_name" required>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="mail" class="fea icon-sm icons"></i-feather>
+                      <input type="email" class="form-control ps-5" placeholder="Email" formControlName="email" required>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Password -->
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <label class="form-label">Password <span class="text-danger">*</span></label>
+                    <div class="form-icon position-relative">
+                      <i-feather name="key" class="fea icon-sm icons"></i-feather>
+                      <input type="password" class="form-control ps-5" placeholder="Password" formControlName="password" required>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Role -->
+<div class="col-md-12">
+  <div class="mb-3">
+    <label class="form-label">Role <span class="text-danger">*</span></label>
+    <div class="form-icon position-relative">
+      <select class="form-select ps-5" formControlName="role" required>
+        <option value="ADMIN">Admin</option>
+        <option value="USER">User</option>
+      </select>
+    </div>
+  </div>
+</div>
+                
+                <!-- Register button -->
+                <div class="col-md-12">
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary mb-2">Register</button>
+                  </div>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+        <!--end col-->
+      </div>
+      <!--end row-->
+    </div>
+    <!--end container-->
+  </section>
+  <!--end section-->
+  <!-- Hero End -->

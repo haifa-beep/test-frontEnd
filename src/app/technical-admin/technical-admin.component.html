@@ -1,0 +1,14 @@
+<div class="navbar">
+    <h1>Dashboard</h1>
+</div>
+  
+<div class="sidebar">
+    <ul>
+        <li><a [routerLink]="['courses']" routerLinkActive="active">Courses</a></li>
+        <li><a href="" (click)="logout()">Deconnection</a></li>
+    </ul>
+</div>
+  
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

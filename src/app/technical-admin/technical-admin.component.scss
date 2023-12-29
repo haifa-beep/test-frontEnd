@@ -1,0 +1,42 @@
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    background-color: #f4f4f4;
+    color: #333;
+    width: 200px;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Content styles */
+  .content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+a {
+  color: black
+}
+
+.active {
+  color: #0d6efd
+}
